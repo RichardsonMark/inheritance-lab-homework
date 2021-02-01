@@ -10,7 +10,7 @@ public class ManagerTest {
 
     @Before
     public void before(){
-        manager = new Manager("Michael Scott", "JT m4 d3 up C", 30000.00, "Sales");
+        manager = new Manager("Michael Scott", "JT m4 d3 up C", 30000.00, "Software Sales");
     }
 
     @Test
@@ -30,7 +30,7 @@ public class ManagerTest {
 
     @Test
     public void hasDeptName(){
-        assertEquals("Sales", manager.getDeptName());
+        assertEquals("Software Sales", manager.getDeptName());
     }
 
     @Test
