@@ -19,6 +19,18 @@ public class DeveloperTest {
     }
 
     @Test
+    public void canChangeName(){
+        developer.setName("Darryl Philbin");
+        assertEquals("Darryl Philbin", developer.getName());
+    }
+
+    @Test
+    public void cannotChangeNameToNull(){
+        developer.setName(null);
+        assertEquals("Jim Halpert", developer.getName());
+    }
+
+    @Test
     public void hasNiNumber(){
         assertEquals("JS m4 d3 up B", developer.getNiNumber());
     }
@@ -32,6 +44,12 @@ public class DeveloperTest {
     public void canRaiseSalary(){
         developer.raiseSalary(500.00);
         assertEquals( 25500.00, developer.getSalary(), 0.0);
+    }
+
+    @Test
+    public void cannotRaiseSalaryNegativeAmount(){
+        developer.raiseSalary(-500.00);
+        assertEquals( 25000.00, developer.getSalary(), 0.0);
     }
 
     @Test
